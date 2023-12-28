@@ -1,0 +1,77 @@
+
+  Lesson 2 Exercises - Numbers and Math
+  
+  Note: do these exercises in the console
+
+  2a. At a resturant, you order 1 soup for $10, 3 burgers for $8 each, 
+  and 1 ice cream for $5. Use JavaScript to calculate the cost of the order
+
+    in console -----
+  10 + 3*8 + 5 
+  >> 39
+
+  2c. Calculate the total cost of a toaster ($18.50) and 2 shirts ($7.50 each).
+   
+  (1850 + 2*750) / 100
+
+  2d. Calculate a 10% of tax for the total in exercises 2c.
+
+  ((1850 + 2*750) / 100 ) * 0.1
+
+  2e. Calculate a 20% tax for the total in 2c (remember that 1% = 1/100, 
+  so 20% = 20/100 = 0.2)
+
+  ((1850 + 2*750) / 100 ) * 0.2
+  
+---------- 
+Setup: in the Amazon project, go to the home page and add a toaster ($18.99) to your
+cart so you have 1 basketball, 1 t-shirt, and 1 toaster. Choose $4.99 shipping for the toaster.
+
+
+2f. Calculate the cost of the products (before shipping and taxes).
+  Hint: calculate in cents to avoid inaccuracies.
+
+  (2095 + 799 + 1899) / 100
+
+2g. Calculate the 10% of tax exactly. Hint use math.round()
+
+  (2095 + 799 + 1899) / 100
+  47.93
+
+  Math.round(47.93)
+  48
+
+2i. Calculate Order total at the bottom. 
+
+  (5292 + 529) / 100
+
+  Finish: after finishing 2i remove the toaster from your cart.
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
