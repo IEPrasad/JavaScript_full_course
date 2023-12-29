@@ -47,31 +47,57 @@ cart so you have 1 basketball, 1 t-shirt, and 1 toaster. Choose $4.99 shipping f
 
   Finish: after finishing 2i remove the toaster from your cart.
   
+-----------------
+
+2j. Let's say we want to always rounder down (2.8 => 2)
+    using Google or an A.I. tool, search for the code to do this.
+
+    let number = 2.8;
+    let roundedDown = Math.floor(number);
+
+    console.log(roundDown); // Output: 2
+
+----------  this is from AI   ------------------ 
+
+the solution from GitHub --- supersimple dev ----
+  
+      Math.floor(2.8)
 
 
+2k. Let's always round a number up (2.2 => 3). Search how to do this.
+
+        let number = 2.2;
+        let roundedUp = Math.ceil(number);
+
+        console.log(roundedUp); // Output: 3
+ 
+      --------------- this is from AI ---------------
+
+        Meth.ceil(2.2)
+      
+      --------- this is the answer GitHub ---------
+
+Challenge Exercises 
+
+We'll use JavaScript to convert temperatures from Celsius to Fahrenheit. The formula is: 
+
+    ** Fahrenheit = (Celsius * 9 / 5) + 32 
+    ** Celsius = (Fahrenheit - 32) * 5 / 9 
+
+2l. The temperature is 25C. Calculate the temperature in Fahrenheit. (77)
+
+    (25 * 9/5) + 32 = 45 + 32 = 77F
+
+2m. The temperature is 86F. Calculate the temperature in Celsius. (30)
+
+    (86 - 32) * 5 / 9
+    = 54 * 5 / 9 = 30C
+
+2n. The temperature is -5C. Calculate the temperature in Fahrenheit. (30)
+    (-5 * 9/5) + 32 = -9 + 32 = 23F
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    ------------------- ------------------------ ------------------------ ------------------------------
 
 
 
