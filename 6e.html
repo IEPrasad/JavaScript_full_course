@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>6e</title>
+</head>
+<body style="
+  background-color: rgba(40, 40, 40, 0.4);
+  ">
+
+  <script>
+    const age = 2;
+    const isHoliday = true;
+
+    // $$ has a higher priority than || so for
+    // this is to work correctly, we need to add 
+    // brackets () around the || check to make 
+    // sure that it gets done first.
+
+    if ((age <= 6 || age >= 60) && !isHoliday) {
+      console.log('Discount');
+    } else {
+      console.log('Not discount');
+    }
+
+
+  </script>
+
+</body>
+</html>
