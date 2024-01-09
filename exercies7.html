@@ -1,0 +1,165 @@
+<!-- 
+  Lesson 7 Exercises - Functions
+
+7a. Create a function called 'greet' that displays the message 'Hello!'
+    in the console. Call / run this function a few times using: greet();
+
+7b. Continuning from 7a, adda parameter called 'name' to the greet
+    function and display the message: 'Hello ${name}!'
+    Call the function a few times with different names: greet('Simon');
+
+7c. Try calling greet() without a name (it will display 'Hello undefined!').
+    Modify the function so that if 'name' is undefined, it will display 'Hi there!' instead.
+
+    (Hint: use an if-statement. Since undefined is a falsy value, you can use: if(!name) {...}
+    to check if 'name' is undefined).
+  
+
+7d. Create a function 'convertToFahrenheit(celsius)' that takes a number
+    in degrees Celsius and returns a number in degrees Fahrenheit.  
+      . Formula: Fahrenheit = (Celsius * 9/5) + 32
+      . ConvertToFahrenheit(25) => 77
+  
+7e. Create a function 'convertToCelsius(fahrenheit)' that takes a number
+    in degrees Fahrenheit and returns a number in degrees Celsius.
+      . Formula: Celsius = (Fahrenheit - 32)*5/9
+      . convertToCelsius(86) => 30
+
+7f. Create a function 'convertTemperature(degrees, unit)' that takes a 
+    number and unit ('C' or 'F'), and converts it into the other unit.
+      . convertTemperature(25,'C') => '77F'
+      . convertTemperature(86, 'F') => '30C'
+
+    Note: return a string. and try to reuse the functions from 7d and 7e.
+
+
+Chllenge Exercises-------------
+
+7g. Create a copy of the Calculator project from exercise 5r (if you didn't do 5r, 'updateCalculation' and reuse the code).
+    . Notice there's a lot of duplicated code in the buttons.
+    . Create a function 'updateCalculation' and reuse the code.
+
+7h. Create a copy of the cart Quantity project from exercise 6l.
+    . Create a function 'updateCartQuantity' and reuse the code.
+
+7i. Modify 'updateCartQuantity' from 7h so that if the quantity is invalid,
+    alert(); and then return; (this is called an early return). An early return
+    make our code cleaner because we can remove the 'else-if' / 'else'.
+
+      if (condition) {
+        alert('The cart is full');
+      } else {
+        ...
+      }
+      ----------⌄⌄⌄⌄⌄⌄⌄⌄---------
+      
+      if (condition) {
+        alert('The cart is full');
+        return;
+      }
+      ....
+
+-->
+<!-- 7a, 7b, 7c -->
+<!-- ⌄⌄⌄⌄⌄⌄⌄ -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Exercises 7 - Functions</title>
+</head>
+<body>
+  <script>
+    function greet(name) {
+      if (!name) {
+        console.log('Hi there!');
+      } else {
+        console.log(`Hello ${name}!`);
+      } 
+    }
+    
+    greet();
+    greet();
+
+    greet('Kamal');
+    greet('Nuwan');
+
+  </script>
+</body>
+</html>
+ -->
+
+<!-- 7d, 7e, 7f ⌄⌄⌄⌄⌄⌄⌄⌄ -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Exercises 7 - Functions</title>
+</head>
+<body>
+  <script>
+    // function convertToFahrenheit(celsius) {
+    //   console.log(Fahrenheit = (celsius * 9 / 5) + 32);
+    // }
+    // convertToFahrenheit(25);
+    // convertToFahrenheit(35);
+    // convertToFahrenheit(45);
+
+
+    // function convertToCelsius(fahrenheit) {
+    //   console.log(Celsius = (fahrenheit - 32) * 5 / 9);
+    // }
+    // convertToCelsius(86);
+    // convertToCelsius(194);
+    // convertToCelsius(131);
+
+
+    function convertTemperature(degrees, unit) {
+
+      if (unit === 'F' || unit === 'f' || unit === 'C' || unit === 'c' ){
+        if (unit === 'C' || unit === 'c') {
+          Fahrenheit = (degrees * 9 / 5) + 32;
+          console.log(`${Fahrenheit}F`);
+        } else if ( unit === 'f' || unit === 'F') {
+          Celsius = (degrees - 32) * 5 / 9;
+          console.log(`${Celsius}C`);
+        }
+      } else {
+        alert('Something went wrong!')
+        return;
+      }
+
+    } 
+    convertTemperature(25,'c');
+    convertTemperature(86,'f');
+
+
+  </script>
+</body>
+</html>
+ -->
+
+
+<!-- ---------- Chllenge exercises ------------- -->
+
+<!--
+  it's can't use from here 
+  create a new html file. 
+  07-exercise-cal.html -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
