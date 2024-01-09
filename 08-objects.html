@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    const product = {
+      name: 'socks',
+      price: 1090
+    };
+    console.log(product);
+    // >> Object { name: "socks", price: 1090 }
+
+    console.log(product.name);
+    // >> socks
+    console.log(product.price);
+    // >> 1090
+
+    // we can use the propety to change the value
+    // inside an object
+
+    product.name = 'cotton socks';
+    console.log(product);
+    // >>Object { name: "cotton socks", price: 1090 }
+
+
+    /// add a new property
+    product.newProperty = true;
+    console.log(product);
+
+    /// delete a property
+    delete product.newProperty;
+    console.log(product);
+
+  </script>
+</body>
+</html>
+
+<!-- 
+
+(1) What is an object?
+    An object groups 
+    multiple values together
+
+    const product = {};
+  ^^^ this is called an object ^^^
+
+
+  Syntax Rules for Objects
+
+    ** we start with an curly bracket and end with a closed curly bracket 
+    name and price we called property
+
+    we seperate the property and value with a colon
+    and (name = 'socks') this is called 
+    Property-Value Pair
+
+    We can have many property value in an object and
+    we separate them with a comma.
+
+    product.name >> this is called Dot Notation.
+
+ --> 
+ <!-- Why we use objects
+
+- make our code more organized-->
