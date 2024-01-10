@@ -5,6 +5,7 @@
 </head>
 <body>
   <script>
+    /*
     const product = {
       name: 'socks',
       price: 1090
@@ -32,6 +33,40 @@
     /// delete a property
     delete product.newProperty;
     console.log(product);
+    */
+
+    // ---------------
+
+    const product2 = {
+      name: 'shirt',
+      'delevery-time': '1 day',
+      rating: {
+        stars: 4.5,
+        count: 87
+      },
+        // ^^ this is called nested object
+      fun: function function1 () {
+        console.log('function inside object');
+      }
+      // ^^ Method
+    
+    };
+    console.log(product2);
+    console.log(product2.name); 
+    console.log(product2['name']);
+    // console.log(product2.delevery-time); // there is a problem, the computer going to do the math 
+    // delivery-time is name of a property
+    // we can use that with the bracket notation like this
+    console.log(product2['delevery-time']);
+    
+    console.log(product2.rating.count); // how to access the nested object
+    product2.fun();
+
+
+    console.log(JSON.stringify(product2));
+    const jasonString = JSON.stringify(product2);
+    console.log(JSON.parse(jasonString));
+
 
   </script>
 </body>
@@ -63,5 +98,155 @@
 
  --> 
  <!-- Why we use objects
+      - make our code more org anized
+Objects 
+    - let us group multiple values together
+    - let us use multiple values together
+    
+visit : supersimple.dev/projects/objects
+    
+-->
 
-- make our code more organized-->
+<!-- 
+  More details about Objects 
+
+    remind: 
+        product.name -- this is called Dot Notation
+    
+    **we going to learn about objects is another  
+      way to access the values inside. we previously learn the Dot Notation.
+
+    console.log(product2['name']);
+        ^^^ this is called Bracket Notation ^^^
+
+  ** Bracket Notation
+      -- lets us use properties that don't work
+         with dot notation
+
+      -- another feature of bracket notation
+         we don't just have to use a string, we can 
+         use a variable, calculation or anything that result in a value.
+          product2[variable1]
+          product2['delevery' + 'time']
+    
+
+  *** Which one should we use?
+      - use dot notation by default 
+      - for properties that don't work,
+        use bracket notation
+        
+  . Iside an object, we can save any type of value
+      numbers, strings, booleans as well as other objects
+
+  . We also can add the functions inside the objects
+      -- A funtion is another type of value
+    ** 
+      Funtion inside object 
+      = Method
+  console.log(typeof console) >> object
+  console.log(typeof console.log) >> function
+    ^^ so this is also a Method 
+
+  Math.random()
+  Math is object
+  random() is funtion
+  so this is also a Method
+  object + function = method
+-->
+
+<!-- ----- Now we are going to learn Built-in Objects 
+
+  (they are provided by the language)
+  
+2 More Built-in Objects
+
+  JSON
+  localStorage
+
+JSON Built-in Obeject
+  - helps us work with JSON
+  JavaScript Object Notation
+  - a syntax
+  - similar to JavaScript object
+  - but has less features
+
+
+---------- Java Script Object ----------
+{
+  name: 'shirt',
+  'delivery-time' : '1 day',
+  rating: {
+    stars: 4.5,
+    count: 87
+  },
+  funt: function funtion1 () {
+    console.log('funtion inside object')
+  }
+}
+-------------------------------------------
+---------- JSON ---------------------------
+{
+  "name" : "shirt",
+  "delivery-time": "1 day",
+  "rating": {
+    "stars": 4.5,
+    "count": 87
+  }
+
+}
+
+must use double quotes in JSON
+JSON does not support single quotes
+and JSON does not support functions 
+
+
+--- So why would we use JSON Syntax
+instead of a JavaScript object syntax?
+
+  . A JavaScript object only makes sense in JavaScript
+  . Jason Syntax can be understood by almost every programming language.
+  . So JASON is more universal
+
+  We use JASON
+    - when we send data between computers
+    - when we store data
+
+  Buit-in JSON Object
+  Convert:
+  JavaScript Object >to> JSON
+
+  JSON.stringify(product2)
+  this will convert the object into JSON
+  
+  So one thing to note about stringify
+  is that actually results in a string.
+
+  we can do this in another way 
+  JSON back to a JavaScript.
+  Convert: 
+    JSON >to> JavaScript
+    JSON.parse()
+----- -->
+
+<!-- -------------
+  
+  Next built-in object:
+  localStorage
+
+  - save values more permenetly
+
+  ** varianles are temporary
+  ** if we refresh / close the page,
+     all the variables are deleted 
+
+    we go to our rock paper scissors code 
+
+    localStorage is only support the strings.
+    localStorage.setItem('message', 'hello');
+    message is name and hello is value in here.
+
+    get the value out of the localStorage 
+    localStorage.getItem('name'); >>
+    ex: console.log(localStorage.getItem('message'));
+  
+  ------------- -->
