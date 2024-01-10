@@ -36,6 +36,7 @@
     */
 
     // ---------------
+    /*
 
     const product2 = {
       name: 'shirt',
@@ -66,9 +67,54 @@
     console.log(JSON.stringify(product2));
     const jasonString = JSON.stringify(product2);
     console.log(JSON.parse(jasonString));
+    */
+    // -----------------------------------
 
+    
+    // console.log('hello'.length); // >> 5
+    // console.log('hello'.toUpperCase()) // >> HELLO
 
-  </script>
+    const object1 = {
+      message: 'hello'
+    };
+    const object2 = object1;
+    // Copy by Reference
+    
+    object1.message = 'Good job!';
+    console.log(object1);
+
+    const object3 = {
+      message: 'Good job!'
+    };
+
+    // console.log(object3 === object1); // >> false
+
+    // ----- short cuts for the objects ------
+
+    const obeject4 = {
+      message: 'Good job!',
+      price: 799
+    };
+    // const message = obeject4.message; // a
+    const { message, price } = obeject4;     // b
+      // there is a and b same and b is the short cut for the a. this is called "destructuring"
+    console.log(message); // >> Good job! 
+    console.log(price); // >> 799
+
+    const object5 = {
+      // message: message
+      message,
+      // method: function function1 () {
+      //   console.log('method');
+      // }
+      method() {
+        console.log('method');
+      }
+    };
+    console.log(object5); // >> Good job!
+    object5.method();
+
+</script>
 </body>
 </html>
 
@@ -200,7 +246,7 @@ JSON does not support single quotes
 and JSON does not support functions 
 
 
---- So why would we use JSON Syntax
+--- So why should we use JSON Syntax
 instead of a JavaScript object syntax?
 
   . A JavaScript object only makes sense in JavaScript
@@ -235,13 +281,13 @@ instead of a JavaScript object syntax?
 
   - save values more permenetly
 
-  ** varianles are temporary
+  ** variables are temporary
   ** if we refresh / close the page,
      all the variables are deleted 
 
     we go to our rock paper scissors code 
 
-    localStorage is only support the strings.
+    localStorage is only support the strings.*****
     localStorage.setItem('message', 'hello');
     message is name and hello is value in here.
 
@@ -249,4 +295,114 @@ instead of a JavaScript object syntax?
     localStorage.getItem('name'); >>
     ex: console.log(localStorage.getItem('message'));
   
-  ------------- -->
+------------- -->
+
+
+<!--
+   ----------- Auto-Boxing -----------
+  
+-->
+
+<!-- 
+  Objects are references
+
+    console.log(object3 === object1); // >> false
+  It will tell us that these two 
+  objects are not equal to each other 
+  even though they have these same values inside.
+  And that's because remember 'Objects are References'
+
+  and this code compares the references 
+      and not the values inside the object.......
+
+      but 
+      console.log(object2 === object1); // >> true
+  *** these two variables have the same reference.
+
+
+ -->
+ <!-- 
+  ** We can't compare objects directly
+  ** because objects are references.
+-->
+
+
+<!-- ------- short cuts for the objects ---------
+
+    const obeject4 = {
+      message: 'Good job!'
+    };
+    // const message = obeject4.message; // a
+    const { message } = obeject4;     // b
+      // there is a and b same and b is the short cut for the a. this is called "destructuring"
+    console.log(message);
+    
+    ----- ^^ 
+        this will take the message property out of  
+        object4 and save it in a variable called 
+        message.
+
+    Next we can use this destructuring shortcut for multiple properties.
+  
+        destructuring
+          - easier way to take properties
+            out of an object
+ 
+--------- Shorthand Property
+
+    const object5 = {
+      message: message
+    };
+----------- ^^ this is same for the 
+      we can use the message instead message: message
+      this is called Shorthand Property
+      we can use this like this
+    
+    const object5 = {
+      message
+    };
+
+    console.log(object5); // >> Good job!
+
+
+---------------------- 
+the last shortcut we going to learn 
+
+    Shorthand Method --------
+      method: function function1 () {
+        console.log('method');
+      }
+    vvvv---- this is doing same thing --vvv
+      
+      method() {
+        console.log('method');
+      }
+    
+-->
+
+<!-- --------------- In this lesson: ---------- 
+
+  1. Objects = group related values together 
+  2. added a score to Rock Paper Scissors
+  3. Built-in objects (JSON, localStorage)
+  4. More details (null, auto-boxing, references)
+  5. Shortcuts (destructuring, shorthand property, shorthand method)
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
