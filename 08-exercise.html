@@ -36,6 +36,24 @@
         . When the page is loaded, get the calculation using .getItem()
         . Use a default value of '' if a calculation doesn't exist in local storage
 
+
+------------ Challenge Exercises------------
+
+8i. We'll improve the coin flip game from exercise 6jto be like the rock 
+    paper scissors game.
+      . Copy the code from exercise 6j (see the solution for 6j if needed).
+      
+      . Create 2 buttons to play the game (heads, tails)
+      . When clicking 'heads' play the game with guess = 'heads'.
+      . When clicking 'tails' play the game with guess = 'tails'.
+      . Create a function 'playGame(guess)' to reuse the code.
+    
+8j. Create a score object { wins: 0, losses: 0 }, update the score each time
+    after playing, and display the score in the console.
+
+8k. Use localStorage to save and load score (hint: you'll need to use JSON.stringfy() to convert the score object to a string).
+
+
 -->
 
 <script>
@@ -114,10 +132,10 @@
       console.log(isSameProduct(product1, product3));
       */
   // -------------------------------------
-    // 8g
+    // 8f
     console.log('Good Mornig'.toLowerCase());
 
-    // 8h
+    // 8g
     console.log('test'.repeat(3));
     // >> testtesttest
 
