@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>spirit-06ex-cartQuantity</title>
+</head>
+<body style="background-color: rgba(0,0,0,0.5);">
+
+  <button onclick="
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  "> Show Quantity</button>
+
+  <button onclick="
+    cartQuantity + 1 > 10 ? alert('The cart is full and don\'t update') : cartQuantity ++;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Add to Cart</button>
+
+  <button onclick="
+    cartQuantity + 2 > 10 ? alert('The cart is full and don\'t update') : cartQuantity += 2;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+2</button>
+
+<button onclick="
+    cartQuantity + 3 > 10 ? alert('The cart is full and don\'t update') : cartQuantity += 3;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+3</button>
+
+  <button onclick="
+    cartQuantity + 4 > 10 ? alert('The cart is full and don\'t update') : cartQuantity += 4;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+4</button>
+
+  <button onclick="
+    cartQuantity + 5 > 10 ? alert('The cart is full and don\'t update') : cartQuantity += 5;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+5</button>
+
+  <button onclick="
+    cartQuantity = 0;
+    console.log('Cart was reset.')  
+    console.log(`Cart Quantity: ${cartQuantity}`)
+  ">Reset Cart</button>
+
+  <button onclick="
+    cartQuantity - 1 < 0 ? alert('Not enough items in the cart') : cartQuantity --;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Remove from cart</button>
+
+  <button onclick="
+    cartQuantity - 2 < 0 ? alert('Not enough items in the cart') : cartQuantity -= 2;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">-2</button>
+
+  <button onclick="
+    cartQuantity - 3 < 0 ? alert('Not enough items in the cart') : cartQuantity -= 3;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">-3</button>
+    
+  <script>
+
+    let cartQuantity = 0;
+  </script>
+
+</body>
+</html>
