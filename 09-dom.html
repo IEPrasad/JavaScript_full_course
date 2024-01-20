@@ -8,12 +8,28 @@
 ">
   <button>hello</button>
   <script>
-    console.log(document.title);
+    
+    
+    // document.title -------------\ 1st property
+    console.log(document.title); // >> DOM (show current title)
+    document.title = 'Changed'; // >> the title is changed to the 'changed'
 
-    /*
-    document.body.innerHTML = 'hello';
-    document.title = 'Good job!';
-    */
+    // document.body -------------\ 2nd property
+    console.log(document.body); // >> (show current body)
+    console.log(typeof document.body); // >> object
+
+    // document.body.innerHTML \ 3rd proerty
+    console.log(document.body.innerHTML); // >> give us all of this HTML inside the body element.
+    document.body.innerHTML = 'changed'; // all of the HTML that we had before was replaced with 'changed'
+    document.body.innerHTML = '<button>Good job!</button>'
+
+
+
+    // document.body.innerHTML = 'hello';
+    // document.title = 'Good job!';
+    
+
+
   </script>
 </body>
 </html>
@@ -37,6 +53,24 @@
           Properties and Methods
           ----------------------
         - document.title
+        - document.body
+            ** ^^ this is the most important property
+            ** We can have HTML elements inside JavaScript
 
+            ** When an HTML element is inside our JavaScript like 
+            this the HTML element is converted into a JavaScript 
+            object.
+                console.log(typeof document.body);
+        - document.body.innerHTML
+            ** So the innerHTML property controls all the 
+               HTML inside the body. That's why it's called 
+               innerHTML    
+        
+        ------- Methods -------------
+  ** Method = function saved inside an object
 
+        - document.querySelector()
+            ** lets us get  
 -->
+
+
