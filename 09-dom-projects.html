@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Projects</title>
+</head>
+<body style=" 
+  background-color: rgba(40, 130, 120, 0.6);
+">
+  <p>YouTube Subscribe Button</p>
+  <button onclick="
+    subscribe();
+" class="js-subscribe-button">Subscribe</button>
+
+  
+  <script>
+      function subscribe() {
+        const buttonElement = document.querySelector('.js-subscribe-button');
+        if (buttonElement.innerText === 'Subscribe') {
+          buttonElement.innerText = 'Subscribed';
+        } else {
+          buttonElement.innerText = 'Subscribe';
+        }
+      }
+
+
+  </script>
+</body>
+</html>
+
+<!-- 
+  Process for JavaScript 
+
+  1. Figure out what steps we need 
+      (algorithm)
+  2. Convert these steps into code 
+-->
+  <!-- 
+    Steps 
+
+     When we click the button,
+
+    1. If the text is 'Subscribe' 
+      => 'Subscribed'
+
+    2. Otherwise, change it back 
+      => 'Subscribe'
+   -->
