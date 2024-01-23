@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <title>Spirit-09-dom-lesson</title>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button onclick="
+    subscribeButton();
+  " class="button-element">Subscribe</button>
+
+  <script>
+    function subscribeButton () {
+       const buttonElement = document.querySelector('.button-element');
+       if (buttonElement.innerText === 'Subscribe') {
+        buttonElement.innerHTML = 'Subscribed';
+       } else {
+        buttonElement.innerHTML = 'Subscribe';
+       }
+    }
+  </script>
+
+</body>
+</html>
