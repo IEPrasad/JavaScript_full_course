@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>localStorage</title>
+</head>
+<body>
+  <script>
+    // setItem in localStorage
+    localStorage.setItem('name', 'Eranda');
+    
+    // getItem in localStorage
+    const name = localStorage.getItem('name')
+    console.log(name); 
+    
+    const subjects = {
+      sub1 : 'Maths',
+      sub2 : 'Science',
+      sub3 : 'English'
+    };
+
+    localStorage.setItem('subjects',JSON.stringify(subjects));
+
+    const subs = localStorage.getItem('subjects');
+    console.log(subs);
+    // >> {"sub1":"Maths","sub2":"Science","sub3":"English"}
+
+    const subsA = JSON.parse(localStorage.getItem('subjects'));
+    console.log(subsA);
+    // >> Object { sub1: "Maths", sub2: "Science", sub3: "English" }
+
+    const marks = {
+      Maths : 99,
+      Science : 80,
+      English : 88
+    }
+
+    localStorage.setItem('marks', JSON.stringify(marks));
+
+    const marksA = JSON.parse(localStorage.getItem('marks'));
+    console.log(marksA); 
+    // >> Object { Maths: 99, Science: 80, English: 88 }
+
+    // ------------
+    // removing data from localStorage
+    localStorage.removeItem('marks');
+    
+    const marksB = JSON.parse(localStorage.getItem('marks'));
+    console.log(marksB);
+    // >> null 
+
+    // Clearing all data from localStorage
+    localStorage.clear();
+    const nameA = localStorage.getItem('name');
+    console.log(nameA);
+    // >> null 
+
+  </script>
+</body>
+</html>
+
+
+
+
