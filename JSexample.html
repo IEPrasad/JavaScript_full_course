@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>JavaScript Example</title>
+  <title>JS subscribe button</title>
+  <style>
+    body {
+      background-color: rgba(40, 40, 140, 0.7);
+    }
+    .subscribe-button {
+      font-size: 15px;
+      font-family: arial;
+      font-weight: bold;
+      color: white;
+      background-color: rgb(171, 41, 41);
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 20px 50px;
+    }
 
-<style>
-	.subscribe-button {
-		border: none;
-		background-color: rgb(240, 10, 10);
-		font-family: arial;
-		font-size: 14px;
-		padding: 10px 15px;
-		color: white;
-		font-weight: bold;
-		border-radius: 5px;
-	}
-	.is-subscribed {
-		background-color: rgb(25, 25, 25);
-		color: white;
-	}
-</style>
-
+    .is-subscribed {
+      background-color: rgb(25, 25, 25);
+    }
+  </style>
 </head>
-
 <body>
-	<button class='subscribe-button'
-	onclick="
-		// subscribeColor();
-		subscribeElement();"
-	>SUBSCRIBE</button>
-	<script>
-		let subscribe = document.querySelector('.subscribe-button');	
-		function subscribeElement () {
-			if (subscribe.innerHTML === 'SUBSCRIBE') {
-				subscribe.innerHTML = 'SUBSCRIBED'; 
-				subscribe.innerHTML.classList.add('is-subscribed');		
-			} else {
-				subscribe.innerHTML = 'SUBSCRIBE'; 
-				subscribe.innerHTML.classList.remove('is-subscribed');
-			}
-		
-		} 
+  <button onclick="
+    subscribe(); 
+  " class="js-subscribe-button subscribe-button"
+  >SUBSCRIBE</button>
 
-		// function subscribeColor () {
-		// 	if (subscribe.innerHTML === 'SUBSCRIBE') {
-		// 		subscribe.innerHTML.classList.remove('is-subscribed');
-		// 	} else if (subscribe.innerHTML === 'SUBSCRIBED') {
-		// 		subscribe.innerHTML.classList.add('is-subscribed');
-		// 	}
-		// }	
-		
-	</script>
+  <script>
+    const subscribeElement = document.querySelector('.js-subscribe-button');
+
+    function subscribe() {
+      if (subscribeElement.innerText === 'SUBSCRIBE') {
+        subscribeElement.innerText = 'SUBSCRIBED';
+        subscribeElement.classList.add('is-subscribed')
+      } else {
+        subscribeElement.innerText = 'SUBSCRIBE';
+        subscribeElement.classList.remove('is-subscribed')
+      }
+    }
+  </script>
 </body>
-
-
 </html>
