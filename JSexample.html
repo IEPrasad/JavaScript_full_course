@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Example</title>
+
+<style>
+	.subscribe-button {
+		border: none;
+		background-color: rgb(240, 10, 10);
+		font-family: arial;
+		font-size: 14px;
+		padding: 10px 15px;
+		color: white;
+		font-weight: bold;
+		border-radius: 5px;
+	}
+	.is-subscribed {
+		background-color: rgb(25, 25, 25);
+		color: white;
+	}
+</style>
+
+</head>
+
+<body>
+	<button class='subscribe-button'
+	onclick="
+		// subscribeColor();
+		subscribeElement();"
+	>SUBSCRIBE</button>
+	<script>
+		let subscribe = document.querySelector('.subscribe-button');	
+		function subscribeElement () {
+			if (subscribe.innerHTML === 'SUBSCRIBE') {
+				subscribe.innerHTML = 'SUBSCRIBED'; 
+				subscribe.innerHTML.classList.add('is-subscribed');		
+			} else {
+				subscribe.innerHTML = 'SUBSCRIBE'; 
+				subscribe.innerHTML.classList.remove('is-subscribed');
+			}
+		
+		} 
+
+		// function subscribeColor () {
+		// 	if (subscribe.innerHTML === 'SUBSCRIBE') {
+		// 		subscribe.innerHTML.classList.remove('is-subscribed');
+		// 	} else if (subscribe.innerHTML === 'SUBSCRIBED') {
+		// 		subscribe.innerHTML.classList.add('is-subscribed');
+		// 	}
+		// }	
+		
+	</script>
+</body>
+
+
+</html>
