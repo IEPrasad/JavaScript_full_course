@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arrays and Loops</title>
+</head>
+<body>
+  <script>
+    const myArray = [10, 20, 30];
+    console.log(myArray); //>> Array(3) [ 10, 20, 30 ]
+    console.log(myArray[0]) // >> 10
+
+    // change the value inside the array
+    myArray[0] = 100;
+    console.log(myArray); // >> Array(3) [ 100, 20, 30 ]
+
+    const array2 = [1, 'hello', true, { name: 'socks'}, [1,2]]
+    console.log(array2); // >> Array(5) [ 1, "hello", true, {…}, (2) […] ]
+
+    console.log(typeof[1, 2]); // >> object
+
+    // how to check something is an array
+    console.log(Array.isArray([1, 2]));
+      // >> true
+
+    
+    console.log(myArray.length); // >> 3
+
+    // .push()
+    myArray.push(199);
+    console.log(myArray);
+    // >> Array(4) [ 100, 20, 30, 199 ]
+
+    myArray.splice(1, 2);
+    console.log(myArray); 
+    // >> Array [ 100, 199 ]
+
+    // >>>>
+    // supersimple.dev/projects/arrays
+
+  </script>
+</body>
+</html>
+
+<!-- 
+  Arrays
+    - another type of value
+    - represent a list of values
+ 
+  Syntax rules for arrays
+    ** ... ...
+    ** Iside an array we can put any type of value.
+      -- array2
+  
+    ** Array is an object 
+      (it's a special type of value) 
+
+
+    ** If we want to check if something is specifically an array, 
+    we can use this code:
+        Array.isArray([1, 2])
+
+    -->
+    <!-- 
+      Arrays have properties and methods
+        - .length
+        - .push()
+            ** Adds a value to the end of the array
+        - .splice()
+            ** Removes a value from an array
+          myArray.splice(0, 2);
+              1. Index we want to remove 
+              2. Number of values to remove
+
+    // supersimple.dev/projects/arrays
+
+
+
+
+-->
+
+
+
+
+
+
+
+
+
+
