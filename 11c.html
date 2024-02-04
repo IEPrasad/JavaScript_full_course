@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 11c (Arrays)</title>
+</head>
+<body>
+  <script>
+    const array1 = [1, 20, 22, 24, 5];
+    const array2 =['hi', 'hello', 'good'];
+
+    arraySwap(array1);
+    arraySwap(array2);
+
+    function arraySwap (array) {
+      const getFirstValue = array[0];
+      const getLastValue = array[`${array.length - 1}`];
+
+      array[0] = getLastValue;
+      array[`${array.length - 1}`] = getFirstValue;
+
+      console.log(array);
+    }
+
+    // >> Array(5) [ 5, 20, 22, 24, 1 ]
+    // >> Array(3) [ "good", "hello", "hi" ]
+
+  </script>
+</body>
+</html>
