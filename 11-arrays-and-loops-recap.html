@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arrays and Loops (Recap)</title>
+</head>
+<body style="background-color: rgba(10, 10, 60, 0.6);">
+
+  <script>
+    const myArray = [10, 20, 30];
+    console.log(myArray);
+
+    console.log(myArray[1]);
+    myArray[0] = 99;
+    console.log(myArray);
+    // >> Array(3) [ 99, 20, 30 ]
+
+    [1, 'hello', true, { name: 'socks' }, [1, 2]]
+
+    console.log(typeof[1, 2, 10]);
+    // >> object
+
+    console.log(Array.isArray([1, 2, 10]));
+    // >> true
+
+    console.log(myArray.length);
+    // >> 3
+    
+    myArray.push(100);
+    console.log(myArray);
+    // >> Array(4) [ 99, 20, 30, 100 ]
+
+    myArray.splice(0, 2);
+    console.log(myArray);
+    // >> Array [ 30, 100 ]
+
+  </script>
+</body>
+</html>
+
+<!-- 
+  supersimeple.dev/projects/arrays
+ -->
+
+<!-- 
+  1- ** Arrays have properties and methods 
+        .length
+        .push()
+            - Adds a value to the end of the array
+        .splice()
+            - Removes a value from an array
+            - .splice(a, b)
+                a. Index we want to remove 
+                b. Number of values to remove
+ -->
