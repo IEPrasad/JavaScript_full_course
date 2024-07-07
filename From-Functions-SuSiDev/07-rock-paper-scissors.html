@@ -7,63 +7,55 @@
 
   <p>Rock Paper Scissors</p>
   <button onclick="
-    const computerMove = pickComputerMove();
-
-    let result = '';
-
-    if (computerMove === 'rock') {
-      result = 'Tie.';
-    } else if (computerMove === 'paper') {
-      result = 'You lose.';
-    } else if (computerMove === 'scissors') {
-      result = 'You win.'
-    }
-
-    alert(`You picked rock. Computer picked ${computerMove}. ${result}`);
-
+    playGame('rock');
   ">Rock</button>
 
-  <button onclick="
-    const computerMove = pickComputerMove();
-
-    let result = '';
-
-    if (computerMove === 'rock') {
-      result = 'You win.';
-    } else if (computerMove === 'paper') {
-      result = 'Tie.';
-    } else if (computerMove === 'scissors') {
-      result = 'You lose.'
-    }
-
-    alert(`You picked paper. Computer picked ${computerMove}. ${result}`);
-
+  <button onclick=" 
+    playGame('paper');
   ">Paper</button>
   
   <button onclick="
-    // console.log(pickComputerMove()); this is check moment
-    const computerMove = pickComputerMove();
-    // ^^ This is take a value from function and save it inside the variable, and it also same name
-    // by scope its prevent the errors using same names.
-
-
-    let result = '';
-
-    if (computerMove === 'rock') {
-      result = 'You lose.';
-    } else if (computerMove === 'paper') {
-      result = 'You win.';
-    } else if (computerMove === 'scissors') {
-      result = 'Tie.'
-    }
-
-    alert(`You picked scissors. Computer picked ${computerMove}. ${result}`);
-
+    playGame('scissors');
   ">Scissors</button>
 
 
   <script>
-    
+    function playGame(playerMove) {
+      const computerMove = pickComputerMove();
+
+      let result = '';
+
+      if (playerMove === 'scissors') {
+        if (computerMove === 'rock') {
+          result = 'You lose.';
+        } else if (computerMove === 'paper') {
+          result = 'You win.';
+        } else if (computerMove === 'scissors') {
+          result = 'Tie.'
+        }
+
+      } else if (playerMove === 'paper') {
+        if (computerMove === 'rock') {
+          result = 'You win.';
+        } else if (computerMove === 'paper') {
+          result = 'Tie.';
+        } else if (computerMove === 'scissors') {
+          result = 'You lose.'
+        }
+
+      } else if (playerMove === 'rock') {
+        if (computerMove === 'rock') {
+          result = 'Tie.';
+        } else if (computerMove === 'paper') {
+          result = 'You lose.';
+        } else if (computerMove === 'scissors') {
+          result = 'You win.'
+        }
+      }
+      
+      alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+
+    }
 
     function pickComputerMove() {
       const randomNumber = Math.random();
@@ -163,5 +155,5 @@
   Best practices
     ** Keep variables inside a scope 
       (if we can)
-      
+
 -->
