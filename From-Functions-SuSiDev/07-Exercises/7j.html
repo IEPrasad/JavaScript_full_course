@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>7j</title>
+</head>
+<body>
+  <p>
+    <button onclick="
+      input += 1; 
+      console.log(input); 
+    ">1</button>
+
+    <button onclick="
+      input += 2;
+      console.log(input); 
+    ">2</button>
+
+    <button onclick="
+      input += 3;
+      console.log(input); 
+    ">3</button>
+
+    <button onclick="
+      input += ' + ';
+      console.log(input); 
+    ">+</button>
+  </p>
+
+  <p>
+    <button onclick="
+      input += 4;
+      console.log(input); 
+    ">4</button>
+
+    <button onclick="
+      input += 5;
+      console.log(input); 
+    ">5</button>
+
+    <button onclick="
+      input += 6;
+      console.log(input); 
+    ">6</button>
+
+    <button onclick="
+      input += ' - ';
+      console.log(input); 
+    ">-</button>
+  </p>
+
+  <p>
+    <button onclick="
+      input += 7; 
+      console.log(input); 
+    ">7</button>
+
+    <button onclick="
+      input += 8;
+      console.log(input); 
+    ">8</button>
+
+    <button onclick="
+      input += 9;
+      console.log(input); 
+    ">9</button>
+
+    <button onclick="
+      input += ' * ';
+      console.log(input); 
+    ">*</button>
+  </p>
+
+  <p>
+    <button onclick="
+      input += 0; 
+      console.log(input); 
+    ">0</button>
+
+    <button onclick="
+      input += '.';
+      console.log(input); 
+    ">.</button>
+
+    <button onclick="
+      calculate();
+    ">=</button>
+
+    <button onclick="
+      input += ' / ';
+      console.log(input); 
+    ">/</button>
+  </p>
+
+  <p>
+    <button onclick="
+      input ='';
+      console.log(input); 
+    ">clear</button>
+  </p>
+
+
+  <script>
+
+    let input = '';
+    function calculate() {
+      console.log(eval(input));
+    }
+  </script>
+</body>
+</html>
