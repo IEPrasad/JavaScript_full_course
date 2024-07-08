@@ -6,6 +6,61 @@
 <body>
   <script>
     function convertLength(length, from, to) {
+
+      if (from !== 'miles' && from !== "km" && from !== 'ft') {
+        return (`Invalid unit: ${from}`);
+      } else if (to !== 'miles' && to !== 'km' && to !== 'ft') {
+        return (`Invalid unit: ${to}`);
+      }
+
+      if (from === 'miles' && to === 'km') {
+        return(`${length * 1.6} km`);
+
+      } else if(from === 'km' && to === 'miles') {
+        return(`${length / 1.6} miles`);
+
+      } else if (from === 'km' && to === 'km') {
+        return(`${length} km`);
+      
+      } else if (from === 'miles' && to === 'ft') {
+        return(`${length * 5280} ft`);
+
+      } else if (from === 'km' && to === 'ft') {
+        return(`${length * 3281} ft`);
+        
+      } else if (from === 'ft' && to === 'miles') {
+        return(`${length / 5280} miles`);
+
+      } else if (from === 'ft' && to === 'km') {
+        return(`${length / 3281} km`);
+
+      } else if (from === 'ft' && to === 'ft') {
+        return(`${length} ft`);
+      } 
+      
+    }
+
+    console.log(convertLength(5, 'lbs', 'lbs'));
+    
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>7i</title>
+</head>
+<body>
+  <script>
+    function convertLength(length, from, to) {
       if (from === 'miles' && to === 'km') {
         let length_in_km = length * 1.6;
         console.log(`${length_in_km} km`);
@@ -17,7 +72,7 @@
       } else if (from === 'miles' && to === 'ft') {
         let length_in_ft = length * 5280;
         console.log(`${length_in_ft} ft`);
-      } else if (from = 'km' && to === 'ft') {
+      } else if (from === 'km' && to === 'ft') {
         let length_in_ft = length * 3281;
         console.log(`${length_in_ft} ft`);
       } else if (from === 'ft' && to === 'miles') {
@@ -41,8 +96,9 @@
   </script>
 </body>
 </html>
+ -->
 
-
+ <!-- ^^^^^^^^^^^^^ This is not correct code for 7i-------------->
 
 <!-- <!DOCTYPE html>
 <html lang="en">
