@@ -7,24 +7,37 @@
   </head>
 <body>
 
-  <button onclick="choice()">
-    click me 
+  <button onclick="choice(), rock()">
+    Rock
   </button>
   <script>
 
 
-    function choice() {
+    function ComputerMove() {
       const x = Math.random();
       console.log(x);
       console.log("");
       if (0 < x < 1/3) {
         console.log("Rock");
+        const ComputerMove = "Rock";
       } else if (1/3 <= x < 2/3) {
         console.log("Paper");
+        const ComputerMove = "Paper";
       } else if (2/3 <= x < 1) {
         console.log("Scissors");
+        const ComputerMove = "Scissors";
       }
     }
+
+    function rock() {
+      if (ComputerMove == "Rock") {
+        console.log("Tie");
+      } else if(ComputerMove = "Paper") {
+        console.log("Lose!");
+      } else if (ComputerMove == "Scissors") {
+        console.log("Win!");
+      }
+    } 
 
   </script>
 </body>
