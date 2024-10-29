@@ -1,97 +1,44 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors Game</title>
+    <title>Rock Paper Scissors</title>
   </head>
-<body>
 
-  <button onclick="
-    rock()
-  ">Rock</button>
+  <body>
+    <button onclick="
+      pickComputerMove()
+    ">Rock</button>
 
-  <button onclick="
-    paper()
-  ">Paper</button>
+    <button>Paper</button>
 
-  <button onclick="
-    scissors()
-  ">Scissors</button>
+    <button>Scissors</button>
   
   <script>
-    function rock() {
-      const x = Math.random();
-      // console.log(x);
-
-      console.log("");
-      if (0 < x < 1/3) {
-        console.log("Your choice is rock");
-        console.log("Computer choose Rock");
-        console.log("Tie");
-      
-      } else if (1/3 <= x < 2/3) {
-        console.log("Your choice is rock");
-        console.log("Computer choose Paper");
-        console.log("Lose!");
-      
-      } else if (2/3 <= x < 1) {
-        console.log("Your choice is rock");
-        console.log("Computer choose Scissors");
-        console.log("Win!");
+    function pickComputerMove() {
+      const computerMove = Math.random();
+      if (0 < computerMove && computerMove < 1/3 ) {
+        console.log("Rock");
+      } else if (1/3 <= computerMove && computerMove < 2/3) {
+        console.log("Paper");
+      } else if (2/3 <= computerMove && computerMove < 1) {
+        console.log("Scissors");
       }
-    
-    } 
 
-    
-    function paper() {
-      const x = Math.random();
-      // console.log(x);
-
-      console.log("");
-      if (0 < x < 1/3) {
-        console.log("Your choice is paper");
-        console.log("Computer choose Rock");
-        console.log("Win!");
-      
-      } else if (1/3 <= x < 2/3) {
-        console.log("Your choice is paper");
-        console.log("Computer choose Paper");
-        console.log("tie");
-      
-      } else if (2/3 <= x < 1) {
-        console.log("Your choice is paper");
-        console.log("Computer choose Scissors");
-        console.log("Lose!");
-      }
-    
-    } 
-
-        
-    function scissors() {
-      const x = Math.random();
-      // console.log(x);
-
-      console.log("");
-      if (0 < x < 1/3) {
-        console.log("Your choice is scissors");
-        console.log("Computer choose Rock");
-        console.log("Lose!");
-      
-      } else if (1/3 <= x < 2/3) {
-        console.log("Your choice is Scissors");
-        console.log("Computer choose Paper");
-        console.log("Win");
-      
-      } else if (2/3 <= x < 1) {
-        console.log("Your choice is Scissors");
-        console.log("Computer choose Scissors");
-        console.log("Tie");
-      }
-    
-    } 
-
-
+    }
   </script>
-</body>
+  
+  
+  </body>
+
+
 </html>
+
+<!-- 
+  Algorithm (Version -1)
+
+1. Create 3 buttons - Rock, Paper, and Scissors
+2. Create a function for pick a computer move 
+3. Create a function for play game 
+4. Compare computer move and player move 
+5. Get the result using console.
+-->
