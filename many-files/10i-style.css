@@ -1,0 +1,32 @@
+body{
+  background-color: black;
+}
+button {
+  font-size: 26px;
+  color: white;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  border: none;
+  margin-right: 5px;
+  background-color: rgb(255, 170, 0);
+  cursor: pointer;
+}
+button:active {
+  opacity: 0.7;
+} 
+.number-button {
+  background-color: rgba(77, 73, 73, 0.8);
+  font-size: 24px;
+}
+.clear-button{
+  font-size: 18px;
+  background-color: rgba(77, 73, 73, 0.8);
+}
+
+.display-element{
+  font-size: 45px;
+  color: white;
+  margin: 0;
+  font-family: sans-serif;
+}

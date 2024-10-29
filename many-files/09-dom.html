@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM</title>
+</head>
+<body style=" 
+  background-color: rgba(40, 130, 120, 0.6);
+">
+  <button>hello</button>
+  <button class="js-button">Second button</button>
+  <script>
+    
+    // document.querySelector() ---------\ 4th property
+    console.log(document.querySelector('button'));
+        // ^^ it will get the first button element from the web page
+        // >> <button>
+    console.log(document.querySelector('body'));
+        // ^^ it will get the first body element from the web page 
+        // <body style=" \n  background-color: rgba(40, 130, 120, 0.6);\n">
+    
+            // ** so remember; when an HTML element is inside 
+              // JavaScript it's just a JavaScript object.
+            // ** Every HTML element has a property .innerHTML 
+          // so we can use that like this vvv
+    console.log(document.querySelector('button').innerHTML);
+        // ^^ this will give us inside the HTML iside the button
+        // >> hello    
+        // if we change the innerHTML property, it will changed the 
+        // HTML inside the button.
+    // document.querySelector('button').innerHTML = 'Changed' 
+          // we can use this like this 
+    document.querySelector('button')
+      .innerHTML = 'Changed';
+    
+    // console.log(document.querySelector('.js-button'));
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
+      
+      // supersimple.dev/projects/dom
+
+
+
+
+
+    /* 
+    // document.title -------------\ 1st property
+    console.log(document.title); // >> DOM (show current title)
+    document.title = 'Changed'; // >> the title is changed to the 'changed'
+
+    // document.body -------------\ 2nd property
+    console.log(document.body); // >> (show current body)
+    console.log(typeof document.body); // >> object
+
+    // document.body.innerHTML \ 3rd proerty
+    console.log(document.body.innerHTML); // >> give us all of this HTML inside the body element.
+    document.body.innerHTML = 'changed'; // all of the HTML that we had before was replaced with 'changed'
+    document.body.innerHTML = '<button>Good job!</button>'
+
+    */
+    /*
+    document.body.innerHTML = 'hello';
+    document.title = 'Good job!';
+    */
+
+
+  </script>
+</body>
+</html>
+
+<!-- 
+  ** DOM = another built-in object 
+         = document object  
+  
+  ** The document object represents / models 
+     the webpage. 
+     
+     Syntax Rules for the DOM ---------
+
+      .. So the DOM is just this built in document object
+
+  ** document also has methods 
+    ** The document obeject also has methods we can use and we'll  
+       learn about later in this lesson.
+          documnt.querySelector('button');
+    
+          Properties and Methods
+          ----------------------
+        - document.title
+        - document.body
+            ** ^^ this is the most important property
+            ** We can have HTML elements inside JavaScript
+
+            ** When an HTML element is inside our JavaScript like 
+            this the HTML element is converted into a JavaScript 
+            object.
+                console.log(typeof document.body);
+        - document.body.innerHTML
+            ** So the innerHTML property controls all the 
+               HTML inside the body. That's why it's called 
+               innerHTML    
+        
+        ------- Methods -------------
+  ** Method = function saved inside an object
+
+        - document.querySelector()
+            ** lets us get any element from the page and put it 
+            inside our JavaScript between these ('')brackets  
+-->
+<!-- 
+    ** class attribute = adds a label 
+ -->
+ <!-- 
+  DOM combines JS and HTML together 
+  It gives full control of the webpage
+  -->
+    <!--  
+      supersimple.dev/projects/dom
+     -->
+
