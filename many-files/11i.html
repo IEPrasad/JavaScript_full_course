@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 11i</title>
+</head>
+<body>
+  <script>
+    addNum([1, 2, 3], 2);
+    addNum([1, 2, 3,], 3);
+    addNum([-2, -1, 0, 99], 2);
+
+    function addNum (array, num) {
+      const index = array.length -1;
+      let i = index;
+      while ( i >= 0) {
+        array[i] += num;
+        i -= 1;
+        if (i < 0) {
+          console.log(array);
+        }
+      }
+      
+    }
+  </script>
+</body>
+</html>

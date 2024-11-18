@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 11h</title>
+</head>
+<body>
+  <script>
+
+    const array1 = [1, 2, 3];
+    const array2 = [-2, -1, 0, 99];
+
+    addOne(array1);
+    addOne(array2);
+
+
+    function addOne(array) {
+      const index = array.length -1;
+
+      let i = index;
+
+      while (i >= 0 ) {
+        array[i] += 1;
+        i -= 1;
+        if ( i < 0 ) {
+          console.log(array);
+        }
+      }
+
+
+    }
+
+
+  </script>
+</body>
+</html>

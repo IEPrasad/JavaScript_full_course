@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercises 08</title>
+</head>
+<body>
+  <!-- 
+  8a. Let's say in the Amazon project, we have a basketball product. this
+      product has a name of 'basketball', a price of 2095 cents. Create an
+      object to represent this product and display it in the console.
+
+  8b. Continuning from 8a, let's say we want to increase the price by 500
+      cents, Use dot notation to increase the price, and display the 
+      updated object in the console.
+
+  8c. Using bracket notation, add a property 'delivery-time' to the object
+      with the value '3 days'. Display the updated object in the console.
+
+  8d. Create a function 'comparePrice(product1, product2)', which takes 2 
+      products (with 'name' and 'price' properties) and returns the product
+      that is less expensive. Create 2 products and try out the function. 
+    
+  8e. Create a function 'isSameProduct(product1, product2)', which returns
+      true if 2 products have the same values inside ('name' and 'price').
+      If not, returns false. Create 2 products and try out the function.
+      (Hint: objects are refereces so you can't compare them directly).
+      
+  8f. Using Google or and A.I. tool, search ho to convert a string to all 
+      lowercase with JavaScript ('Good Morning' => 'good morning')
+
+  8g. Search how to repeat a string many times ('test' 2 times => 'testtest')
+
+  8h. We'll add localStorage to the calculator project. First, make a copy of
+      the project from exercise 7g (see the solutions for 7g if needed).
+        . Whenever we update the calculation, save it using .setItem()
+        . When the page is loaded, get the calculation using .getItem()
+        . Use a default value of '' if a calculation doesn't exist in local storage
+
+
+------------ Challenge Exercises------------
+
+8i. We'll improve the coin flip game from exercise 6jto be like the rock 
+    paper scissors game.
+      . Copy the code from exercise 6j (see the solution for 6j if needed).
+      
+      . Create 2 buttons to play the game (heads, tails)
+      . When clicking 'heads' play the game with guess = 'heads'.
+      . When clicking 'tails' play the game with guess = 'tails'.
+      . Create a function 'playGame(guess)' to reuse the code.
+    
+8j. Create a score object { wins: 0, losses: 0 }, update the score each time
+    after playing, and display the score in the console.
+
+8k. Use localStorage to save and load score (hint: you'll need to use JSON.stringfy() to convert the score object to a string).
+
+
+-->
+
+<script>
+  /*
+  // 8a
+  const product = {
+    name: 'basketball',
+    price: 2095
+  };
+
+  // 8b
+  product.price += 500;
+  console.log(product);
+  
+  // 8c
+  product['deleverty-time'] = '3 days';
+  console.log(product);
+
+  // 8d
+  function comparePrice (product1, product2) {
+    if (product1.price < product2.price) {
+      return product1.price;
+    } else {
+      return product2.price;
+    }
+  }   
+
+  const product1 = {
+    name: 'bascketball',
+    price: 2095
+  };
+  const product2 = {
+    name: 'socks',
+    price: 1090
+  };
+
+  console.log(comparePrice(product1, product2));
+  */
+  /*
+  // 8e
+  function isSameProduct(product1, product2) {
+        if (
+          product1.name === product2.name &&
+          product1.price === product2.price
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      // Here is an alternative solution that uses less code.
+      function isSameProduct(product1, product2) {
+        return (
+          product1.name === product2.name &&
+          product1.price === product2.price
+        );
+      }
+
+      const product1 = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      const product2 = {
+        name: 'socks',
+        price: 1090
+      };
+
+      const product3 = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      console.log(isSameProduct(product1, product2));
+      console.log(isSameProduct(product1, product3));
+      */
+  // -------------------------------------
+    // 8f
+    console.log('Good Mornig'.toLowerCase());
+
+    // 8g
+    console.log('test'.repeat(3));
+    // >> testtesttest
+
+
+</script>
+</body>
+</html>
