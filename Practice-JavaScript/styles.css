@@ -3,8 +3,14 @@ body {
 }
 
 table {
-  border: 1;
-  border-style: initial;
+  border-collapse: collapse; /* Removes the gap between table borders */
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black; /* Ensures borders are visible */
+  padding: 10px; /* Adds padding for better spacing inside cells */
+  text-align: left;
 }
 
 label {
