@@ -1,0 +1,18 @@
+body {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+table {
+  border: 1;
+  border-style: initial;
+}
+
+label {
+  font-family: sans-serif;
+  font-size: 22px;
+}
+
+input {
+  font-family: sans-serif;
+  font-size: 22px;
+}
